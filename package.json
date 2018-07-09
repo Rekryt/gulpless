@@ -1,0 +1,33 @@
+{
+  "name": "gulpless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Rekryt/gulpless.git"
+  },
+  "keywords": [
+    "gulp",
+    "less",
+    "browsersync"
+  ],
+  "author": "Krupkin Sergey",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Rekryt/gulpless/issues"
+  },
+  "homepage": "https://github.com/Rekryt/gulpless#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-less": "^3.5.0",
+    "gulp-util": "^3.0.8"
+  }
+}
