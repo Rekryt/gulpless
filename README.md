@@ -30,6 +30,9 @@ const config = {
 ```
 
 How to use:
-```
+```bash
 gulp
 ```
+
+- https://nodejs.org/en/
+- https://www.browsersync.io/docs/gulp
