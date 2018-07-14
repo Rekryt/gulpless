@@ -5,6 +5,7 @@ var browserSync = require('browser-sync').create();
 var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS = require('gulp-clean-css');
 var gcmq = require('gulp-group-css-media-queries');
+var concat = require('gulp-concat');
 
 const config = {
 	proxy: 'example.zone',
@@ -29,6 +30,7 @@ gulp.task('build', function () {
         .pipe(gcmq())
         .pipe(autoprefixer('last 10 versions', 'ie 9'))
         .pipe(cleanCSS({level: 2}))
+		//.pipe(concat('styles.css'))
         .pipe(gulp.dest(config.root + config.less.dest))
         .pipe(browserSync.stream());
 });
