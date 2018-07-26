@@ -15,13 +15,10 @@ const config = {
 		src: 'less/*.less',
 		dest: 'css'
 	},
-	css: {
-		watch: 'css/*.css',
-		serveStatic: [{
-			route: ['/templates/example-template-route/css'],
-			dir: 'css'
-		}]
-	}
+	serveStatic: [{
+		route: ['/templates/example-template-route/css'],
+		dir: 'css'
+	}]
 };
 
 gulp.task('build', function () {
@@ -42,7 +39,7 @@ gulp.task('watch', ['browserSync'], function () {
 gulp.task('browserSync', function () {
 	browserSync.init({
 		proxy: config.proxy,
-		serveStatic: config.css.serveStatic
+		serveStatic: config.serveStatic
 	});
 });
 
