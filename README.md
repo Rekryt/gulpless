@@ -15,8 +15,8 @@ npm install gulp -D
 ```
 
 Setting a config in gulpfile.js file:
-- **example.zone** - proxy host for BrowserSync
-- **example-template-route** - serveStatic route for work with local css files instead of the remote files
+- **example.rekryt.ru** - proxy host for BrowserSync
+- **"templates/example" and "./dist/example"** - serveStatic route for work with local css files instead of the remote files
 ```javascript
 const config = {
 	proxy: 'example.rekryt.ru',
