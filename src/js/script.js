@@ -1,1 +1,1 @@
-console.log("todo");
+console.log("script.js");

@@ -6,3 +6,5 @@
 /package-lock.json
 /**/node_modules/
 /**/*.map
+/build/*
+/dist/example/*

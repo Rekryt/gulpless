@@ -1,4 +1,2 @@
 "use strict";
-
-console.log("todo");
-//# sourceMappingURL=babel.js.map
+console.log("babel.js");

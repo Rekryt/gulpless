@@ -2,7 +2,7 @@
 
 global.GLOBAL.$ = {
 	/* config */
-	config: require('./gulp/config/config.js')(),
+	config: require('./gulp/config.js')(),
 
 	/* gulp & gulp plugins */
 	gulp: require('gulp'),
@@ -21,13 +21,18 @@ global.GLOBAL.$ = {
 	wait: require('gulp-wait'),
 
 	/* browserSync */
-	browserSync: require('browser-sync').create(),
-
-	/* gulp tasks */
-	tasks: require('./gulp/config/tasks.js')
+	browserSync: require('browser-sync').create()
 };
 $.sass.compiler = require('node-sass');
-
-$.tasks.forEach(function (taskPath) {
+[
+	'./gulp/tasks/default.js',
+	'./gulp/tasks/production.js',
+	'./gulp/tasks/css.js',
+	'./gulp/tasks/babel.js',
+	'./gulp/tasks/js.js',
+	'./gulp/tasks/watch.js',
+	'./gulp/tasks/browserSync.js'
+]
+.forEach(function (taskPath) {
 	require(taskPath)();
 });
