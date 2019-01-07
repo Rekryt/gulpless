@@ -1,17 +1,19 @@
 # Gulp & Css+Sass+Less & Js+Babel & BrowserSync
 
-
 How to install:
 ```
+mkdir gulpless
+cd gulpless
+
 git clone https://github.com/Rekryt/gulpless.git .
 rm -rf .git #optional
+
 npm install
 ```
 
 How to install gulp:
 ```
 npm install gulp-cli -g
-npm install gulp -D
 ```
 
 Setting a config in gulp/config.js file:
