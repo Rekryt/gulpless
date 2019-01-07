@@ -1,0 +1,34 @@
+module.exports = function () {
+	var build_babel = function (src, concat, dest) {
+		return $.gulp.src(src)
+			.pipe($._if(!$.production, $.sourcemaps.init({ loadMaps: true })))
+			.pipe($.plumber(function (error) {
+				$.gutil.log($.gutil.colors.red(error.message));
+				$.gutil.beep(); //play a sound
+				this.emit('end');
+			}))
+			.pipe($.babel({
+				presets: ['@babel/env']
+			}))
+			.pipe($.concat(concat))
+			.pipe($._if(!$.production, $.sourcemaps.write('.', { includeContent: true, sourceRoot: '/babel/' }))
+			)
+			.pipe($.gulp.dest(dest));
+	};
+	/* Assets */
+	$.gulp.task('_babel', function () {
+		return build_babel(
+			$.config._babel.src,
+			$.config._babel.build,
+			'./build/'
+		)
+	});
+	/* Own files */
+	$.gulp.task('babel', function () {
+		return build_babel(
+			$.config.babel.src,
+			$.config.babel.build,
+			'./build/'
+		)
+	});
+};
