@@ -16,19 +16,27 @@ module.exports = function () {
 			.pipe($.gulp.dest(dest));
 	};
 	/* Assets */
-	$.gulp.task('_babel', function () {
-		return build_babel(
-			$.config._babel.src,
-			$.config._babel.build,
-			'./build/'
-		)
+	$.gulp.task('_babel', function (done) {
+		if ($.config._babel.src.length > 0) {
+			return build_babel(
+				$.config._babel.src,
+				$.config._babel.build,
+				'./build/'
+			);
+		} else {
+			done();
+		}
 	});
 	/* Own files */
-	$.gulp.task('babel', function () {
-		return build_babel(
-			$.config.babel.src,
-			$.config.babel.build,
-			'./build/'
-		)
+	$.gulp.task('babel', function (done) {
+		if ($.config.babel.src.length > 0) {
+			return build_babel(
+				$.config.babel.src,
+				$.config.babel.build,
+				'./build/'
+			);
+		} else {
+			done();
+		}
 	});
 };

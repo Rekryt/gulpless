@@ -1,5 +1,6 @@
 module.exports = function () {
 	var build_js = function (src, concat, dest) {
+		if (src.length > 0)
 		return $.gulp.src(src)
 			.pipe($._if(!$.production, $.sourcemaps.init({ loadMaps: true })))
 			.pipe($.plumber(function (error) {
@@ -13,19 +14,28 @@ module.exports = function () {
 			.pipe($.gulp.dest(dest));
 	};
 	/* Assets */
-	$.gulp.task('_js', function () {
-		return build_js(
-			$.config._js.src,
-			$.config._js.build,
-			'./build/'
-		);
+	$.gulp.task('_js', function (done) {
+		if ($.config._js.src.length > 0) {
+			return build_js(
+				$.config._js.src,
+				$.config._js.build,
+				'./build/'
+			);
+		} else {
+			done();
+		}
+
 	});
 	/* Own files */
-	$.gulp.task('js', function () {
-		return build_js(
-			$.config.js.src,
-			$.config.js.concat,
-			$.config.js.dest
-		);
+	$.gulp.task('js', function (done) {
+		if ($.config.js.src.length > 0) {
+			return build_js(
+				$.config.js.src,
+				$.config.js.concat,
+				$.config.js.dest
+			);
+		} else {
+			done();
+		}
 	});
 };
