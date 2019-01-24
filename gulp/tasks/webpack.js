@@ -16,7 +16,7 @@ module.exports = function () {
 				publicPath: '/dist/'
 			},
 			watch: !$.production,
-			devtool: !$.production ? 'inline-source-map' : null,
+			devtool: !$.production ? 'inline-source-map' : '',
 			module: {
 				rules: [
 					{
