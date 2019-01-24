@@ -76,10 +76,10 @@ module.exports = function () {
 	});
 	/* Concat Assets and Own Files */
 	config.src.unshift({
-		less:	['./build/'+config._less.build],
-		sass:	['./build/'+config._sass.build],
-		css:	['./build/'+config._css.build],
-		babel:	['./build/'+config._babel.build],
+		less:		['./build/'+config._less.build],
+		sass:		['./build/'+config._sass.build],
+		css:		['./build/'+config._css.build],
+		babel:		['./build/'+config._babel.build],
 		js:	[
 			'./build/'+config._js.build,
 			'./build/'+config.babel.build

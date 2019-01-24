@@ -21,8 +21,9 @@ global.GLOBAL.$ = {
 	wait: require('gulp-wait'),
 
 	/* browserSync */
-	browserSync: require('browser-sync').create()
+	browserSync: require('browser-sync').create(),
 };
+
 $.sass.compiler = require('node-sass');
 [
 	'./gulp/tasks/css.js',
