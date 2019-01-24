@@ -66,6 +66,7 @@ const config = {
 			sass: ['./src/sass/main.scss'],
 			css: ['./src/css/main.css'],
 			babel: ['./src/js/babel.js'],
+			webpack: ['./src/js/webpack.js'],
 			js: ['./src/js/script.js']
 		}
 	],
@@ -81,6 +82,7 @@ const config = {
 		concat: 'style.css'
 	},
 	babel: { build: 'babel.js' },
+	webpack: { build: 'webpack.js' },
 	js: {
 		dest: './dist/example',
 		concat: 'script.js'
@@ -89,6 +91,7 @@ const config = {
 	_sass: { build: '_sass.css'},
 	_css: { build: '_css.css'},
 	_babel: { build: '_babel.js'},
+	_webpack: { build: '_webpack.js'},
 	_js: { build: '_js.js'}
 };
 ```
