@@ -1,5 +1,5 @@
 module.exports = function () {
-	var build_js = function (src, concat, dest) {
+	let build_js = function (src, concat, dest) {
 		if (src.length > 0)
 		return $.gulp.src(src)
 			.pipe($._if(!$.production, $.sourcemaps.init({ loadMaps: true })))

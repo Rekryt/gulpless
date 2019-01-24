@@ -4,11 +4,11 @@ module.exports = function () {
 		$.gulp.series(
 			$.gulp.parallel(
 				'_css',
-				$.gulp.series('_babel', '_js')
+				$.gulp.series('_babel', '_webpack', '_js')
 			),
 			$.gulp.parallel(
 				'css',
-				$.gulp.series('babel', 'js')
+				$.gulp.series('babel', 'webpack', 'js')
 			),
 			$.gulp.parallel(
 				'browserSync',

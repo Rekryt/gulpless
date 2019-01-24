@@ -10,7 +10,10 @@ module.exports = function () {
 		$.gulp.watch(
 			[]
 			.concat($.config.js.src)
-			.concat($.config.babel.src),
+			.concat($.config.babel.src)
+			.concat($.config.webpack.src)
+			.concat(['!'+'./build/'+$.config.babel.build])
+			.concat(['!'+'./build/'+$.config.webpack.build]),
 			$.gulp.series('babel', 'js', 'browserSyncReload')
 		); //.on('change', browserSync.reload);
 	});

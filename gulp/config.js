@@ -45,6 +45,7 @@ module.exports = function () {
 				sass: ['./src/sass/main.scss'],
 				css: ['./src/css/main.css'],
 				babel: ['./src/js/babel.js'],
+				webpack: ['./src/js/webpack.js'],
 				js: ['./src/js/script.js']
 			}
 		],
@@ -60,6 +61,7 @@ module.exports = function () {
 			concat: 'style.css'
 		},
 		babel: { build: 'babel.js' },
+		webpack: { build: 'webpack.js' },
 		js: {
 			dest: './dist/example',
 			concat: 'script.js'
@@ -68,21 +70,24 @@ module.exports = function () {
 		_sass: { build: '_sass.css'},
 		_css: { build: '_css.css'},
 		_babel: { build: '_babel.js'},
+		_webpack: { build: '_webpack.js'},
 		_js: { build: '_js.js'}
 	};
 	config.src.push({
-		less:[],sass:[],css:[],babel:[],js:[],
-		_less:[],_sass:[],_css:[],_babel:[],_js:[]
+		less:[],sass:[],css:[],babel:[],webpack:[],js:[],
+		_less:[],_sass:[],_css:[],_babel:[],_webpack:[],_js:[]
 	});
 	/* Concat Assets and Own Files */
 	config.src.unshift({
-		less:	['./build/'+config._less.build],
-		sass:	['./build/'+config._sass.build],
-		css:	['./build/'+config._css.build],
-		babel:	['./build/'+config._babel.build],
+		less:		['./build/'+config._less.build],
+		sass:		['./build/'+config._sass.build],
+		css:		['./build/'+config._css.build],
+		babel:		['./build/'+config._babel.build],
+		webpack:	['./build/'+config._webpack.build],
 		js:	[
 			'./build/'+config._js.build,
-			'./build/'+config.babel.build
+			'./build/'+config.babel.build,
+			'./build/'+config.webpack.build
 		]
 	});
 	for (var i in config.src) {

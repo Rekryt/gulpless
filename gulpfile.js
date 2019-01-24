@@ -19,13 +19,20 @@ global.GLOBAL.$ = {
 	sourcemaps: require('gulp-sourcemaps'), //https://github.com/gulp-sourcemaps/gulp-sourcemaps/wiki/Plugins-with-gulp-sourcemaps-support
 	plumber: require('gulp-plumber'),
 	wait: require('gulp-wait'),
+	webpackStream: require('webpack-stream'),
 
 	/* browserSync */
-	browserSync: require('browser-sync').create()
+	browserSync: require('browser-sync').create(),
+
+	/* webpack */
+	webpack: require('webpack'),
+	path: require('path')
 };
+
 $.sass.compiler = require('node-sass');
 [
 	'./gulp/tasks/css.js',
+	'./gulp/tasks/webpack.js',
 	'./gulp/tasks/babel.js',
 	'./gulp/tasks/js.js',
 	'./gulp/tasks/watch.js',
