@@ -19,7 +19,7 @@ module.exports = function () {
 					)
 				)
 			)
-			.pipe($._if($.production, $.gcmq()))
+			//.pipe($._if($.production, $.gcmq()))
 			.pipe($._if($.production, $.autoprefixer('last 10 versions', 'ie 9')))
 			.pipe($._if($.production, $.cleanCSS({
 				level: 2,
