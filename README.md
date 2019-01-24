@@ -1,4 +1,4 @@
-# Gulp & Css+Sass+Less & Js+Babel & BrowserSync
+# Gulp & Css+Sass+Less & Js+Babel+Webpack & BrowserSync
 
 How to install:
 ```
