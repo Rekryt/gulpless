@@ -9,7 +9,8 @@ module.exports = function () {
 			}*/
 		});
 	});
-	$.gulp.task('browserSyncReload', function () {
+	$.gulp.task('browserSyncReload', function (done) {
 		$.browserSync.reload();
+		done();
 	});
 };
