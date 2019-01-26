@@ -11,10 +11,9 @@ module.exports = function () {
 			[]
 			.concat($.config.js.src)
 			.concat($.config.babel.src)
-			.concat($.config.webpack.src)
-			.concat(['!'+'./build/'+$.config.babel.build])
-			.concat(['!'+'./build/'+$.config.webpack.build]),
-			$.gulp.series('babel', 'webpack', 'js', 'browserSyncReload')
+			.concat(['./build/'+$.config.webpack.build])
+			.concat(['!'+'./build/'+$.config.babel.build]),
+			$.gulp.series('babel', 'js', 'browserSyncReload')
 		); //.on('change', browserSync.reload);
 	});
 };
