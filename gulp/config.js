@@ -6,9 +6,9 @@ module.exports = function () {
 		serveStatic: [{ route: 'templates/example', dir: './dist/example' }],
 		src: [
 			/* Assets */
-			// jquery 3.3.1
+			// jquery 3.5.1
 			{
-				_js: ['./src/assets/jquery-3.3.1.js'],
+				_js: ['./src/assets/jquery-3.5.1.js'],
 			},
 			// jquery.scrollTo
 			{
