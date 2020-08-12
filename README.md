@@ -2,18 +2,18 @@
 
 How to install:
 ```
-mkdir gulpless
-cd gulpless
+npm install gulp-cli -g #if not exist
 
-git clone https://github.com/Rekryt/gulpless.git .
+git clone https://github.com/Rekryt/gulpless.git gulpless
+cd gulpless
 rm -rf .git #optional
 
 npm install
 ```
 
-How to install gulp:
-```
-npm install gulp-cli -g
+How to use:
+```bash
+gulp
 ```
 
 Setting a config in gulp/config.js file:
@@ -29,9 +29,9 @@ const config = {
 	],
 	src: [
 		/* Assets */
-		// jquery 3.3.1
+		// jquery 3.5.1
 		{
-			_js: ['./src/assets/jquery-3.3.1.js']
+			_js: ['./src/assets/jquery-3.5.1.js']
 		},
 		// jquery.scrollTo
 		{
@@ -54,12 +54,6 @@ const config = {
 			_js: ['./src/assets/bootstrap/js/bootstrap.js'],
 			_css: ['./src/assets/bootstrap/css/bootstrap.css']
 		},
-		/*/ Bootstrap ( Src )
-		{
-			js: ['./src/assets/bootstrap/js/bootstrap.js'], //dist
-			sass: ['./src/assets/bootstrap/scss/bootstrap.scss']
-		},*/
-
 		/* Own Files */
 		{
 			less: ['./src/less/main.less'],
@@ -91,11 +85,6 @@ const config = {
 	_babel: { build: '_babel.js'},
 	_js: { build: '_js.js'}
 };
-```
-
-How to use:
-```bash
-gulp
 ```
 
 - https://nodejs.org/en/
