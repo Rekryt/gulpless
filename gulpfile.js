@@ -5,8 +5,7 @@
 	'./gulp/tasks/watch.js',
 	'./gulp/tasks/browserSync.js',
 	'./gulp/tasks/production.js',
-	'./gulp/tasks/default.js'
-]
-.forEach(function (taskPath) {
+	'./gulp/tasks/default.js',
+].forEach(function (taskPath) {
 	require(taskPath)();
 });
