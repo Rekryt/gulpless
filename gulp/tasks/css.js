@@ -1,3 +1,5 @@
+var $ = require('../global.js');
+
 module.exports = function () {
 	var build_css = function (src, concat, dest, sourceRoot) {
 		if (src.length > 0)
@@ -28,7 +30,8 @@ module.exports = function () {
 			.pipe($.concat(concat))
 			.pipe($._if(!$.production, $.sourcemaps.write('.', { includeContent: true, sourceRoot: sourceRoot })))
 			.pipe($.gulp.dest(dest))
-			.pipe($.browserSync.stream());
+			.pipe($.browserSync.stream())
+			.pipe($.touch());
 	};
 	/* Assets */
 	$.gulp.task('_css', function (done) {
@@ -42,7 +45,6 @@ module.exports = function () {
 		} else {
 			done();
 		}
-
 	});
 	/* Own files */
 	$.gulp.task('css', function (done) {

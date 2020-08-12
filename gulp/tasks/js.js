@@ -1,3 +1,5 @@
+var $ = require('../global.js');
+
 module.exports = function () {
 	let build_js = function (src, concat, dest) {
 		if (src.length > 0)

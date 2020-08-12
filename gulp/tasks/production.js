@@ -1,3 +1,5 @@
+var $ = require('../global.js');
+
 module.exports = function () {
 	$.gulp.task('productionSet', function (done) { $.production = true; done(); });
 	$.gulp.task(

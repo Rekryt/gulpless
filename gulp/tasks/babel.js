@@ -1,3 +1,5 @@
+var $ = require('../global.js');
+
 module.exports = function () {
 	var build_babel = function (src, concat, dest) {
 		return $.gulp.src(src)
