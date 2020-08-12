@@ -5,7 +5,7 @@ module.exports = function () {
 		return $.browserSync.init({
 			proxy: $.config.proxy,
 			serveStatic: $.config.serveStatic,
-			https: $.config.https
+			https: $.config.https,
 			/*socket: {
 				domain: $.config.proxy
 			}*/

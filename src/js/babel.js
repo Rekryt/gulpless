@@ -1,1 +1,1 @@
-console.log("babel.js");
+console.log('babel.js');
